@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raise Request - IT Support Portal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="IMAGES/advance_est.png" alt="Company Logo">
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <nav id="navMenu">
+
+            <a href="index.html">Home</a>
+            <a href="about-it.html">About IT</a>
+            <a href="services.html">Services</a>
+            <a href="softwarex.html">Software</a>
+            <a href="assets.html">Assets</a>
+            <a href="infrastructure.html">Infrastructure</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
+    </header>
+
+
+    <!-- Request Form -->
+
+    <main>
+
+        <section class="request-page">
+
+            <div class="request-header">
+
+                <h1>Raise IT Support Request</h1>
+
+                <p>
+                    Submit your issue or IT requirement to the IT support team.
+                </p>
+
+            </div>
+
+
+            <div class="request-form-container">
+
+                <form id="requestForm">
+
+
+                    <!-- Employee Name -->
+
+                    <div class="request-form-group">
+
+                        <label for="employeeName">
+                            Employee Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="employeeName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Employee ID -->
+
+                    <div class="request-form-group">
+
+                        <label for="employeeId">
+                            Employee ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="employeeId"
+                            placeholder="Enter your employee ID"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Request Category -->
+
+                    <div class="request-form-group">
+
+                        <label for="requestCategory">
+                            Request Category
+                        </label>
+
+                        <select id="requestCategory" required>
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="Software">
+                                Software Issue
+                            </option>
+
+                            <option value="Hardware">
+                                Hardware Issue
+                            </option>
+
+                            <option value="Network">
+                                Network Issue
+                            </option>
+
+                            <option value="Asset">
+                                Asset Request
+                            </option>
+
+                            <option value="Troubleshooting">
+                                Troubleshooting
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Software -->
+
+                    <div
+                        class="request-form-group"
+                        id="softwareGroup"
+                        style="display: none;"
+                    >
+
+                        <label for="softwareName">
+                            Software
+                        </label>
+
+                        <select id="softwareName">
+
+                            <option value="">
+                                Select Software
+                            </option>
+
+                            <option value="OST">
+                                OST
+                            </option>
+
+                            <option value="Outlook">
+                                Outlook
+                            </option>
+
+                            <option value="RFMS">
+                                RFMS
+                            </option>
+
+                            <option value="PlanSwift">
+                                PlanSwift
+                            </option>
+
+                            <option value="Plugins">
+                                Plugins
+                            </option>
+
+                            <option value="Adobe">
+                                Adobe
+                            </option>
+
+                            <option value="Cliq">
+                                Cliq
+                            </option>
+
+                            <option value="Bluebeam">
+                                Bluebeam
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Asset -->
+
+                    <div
+                        class="request-form-group"
+                        id="assetGroup"
+                        style="display: none;"
+                    >
+
+                        <label for="assetName">
+                            Asset Required
+                        </label>
+
+                        <select id="assetName">
+
+                            <option value="">
+                                Select Asset
+                            </option>
+
+                            <option value="Desktop">
+                                Desktop / CPU
+                            </option>
+
+                            <option value="Laptop">
+                                Laptop
+                            </option>
+
+                            <option value="Monitor">
+                                Monitor
+                            </option>
+
+                            <option value="Keyboard">
+                                Keyboard
+                            </option>
+
+                            <option value="Mouse">
+                                Mouse
+                            </option>
+
+                            <option value="UPS">
+                                UPS
+                            </option>
+
+                            <option value="Extension Board">
+                                Extension Board
+                            </option>
+
+                            <option value="Charger">
+                                Charger
+                            </option>
+
+                            <option value="Adapter">
+                                Adapter
+                            </option>
+
+                            <option value="Wi-Fi Dongle">
+                                Wi-Fi Dongle
+                            </option>
+
+                            <option value="Laptop Stand">
+                                Laptop Stand
+                            </option>
+
+                            <option value="Other">
+                                Other IT Equipment
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Priority -->
+
+                    <div class="request-form-group">
+
+                        <label for="priority">
+                            Priority
+                        </label>
+
+                        <select id="priority" required>
+
+                            <option value="">
+                                Select Priority
+                            </option>
+
+                            <option value="Low">
+                                Low
+                            </option>
+
+                            <option value="Medium">
+                                Medium
+                            </option>
+
+                            <option value="High">
+                                High
+                            </option>
+
+                            <option value="Critical">
+                                Critical
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Subject -->
+
+                    <div class="request-form-group">
+
+                        <label for="requestSubject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="requestSubject"
+                            placeholder="Briefly describe the issue"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Description -->
+
+                    <div class="request-form-group">
+
+                        <label for="requestDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="requestDescription"
+                            rows="6"
+                            placeholder="Describe your issue or requirement in detail"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="request-submit"
+                    >
+                        Submit Request
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 IT Support Team. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

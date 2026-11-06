@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Dashboard - IT Support Portal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="IMAGES/advance_est.png" alt="Company Logo">
+        </div>
+
+        <h3>IT Team Dashboard</h3>
+
+        <a href="index.html" class="login-btn">
+            Logout
+        </a>
+
+    </header>
+
+
+    <main class="dashboard">
+
+        <h1>IT Support Dashboard</h1>
+
+        <p>
+            Manage employee IT requests, software issues,
+            asset requests and troubleshooting.
+        </p>
+
+
+        <!-- ==========================================
+             REQUEST STATUS CARDS
+             ========================================== -->
+
+        <div class="dashboard-cards">
+
+
+            <!-- New Requests -->
+
+            <div class="dashboard-card">
+
+                <h2>New Requests</h2>
+
+                <p>
+                    View newly submitted IT requests.
+                </p>
+
+                <div id="newRequestCount">
+                    0
+                </div>
+
+                <button onclick="showNewRequests()">
+                    View Requests
+                </button>
+
+            </div>
+
+
+            <!-- Assigned -->
+
+            <div class="dashboard-card">
+
+                <h2>Assigned</h2>
+
+                <p>
+                    View requests assigned to IT team members.
+                </p>
+
+                <div id="assignedCount">
+                    0
+                </div>
+
+                <button onclick="showRequestsByStatus('Assigned')">
+                    View Requests
+                </button>
+
+            </div>
+
+
+            <!-- In Progress -->
+
+            <div class="dashboard-card">
+
+                <h2>In Progress</h2>
+
+                <p>
+                    View requests currently being handled.
+                </p>
+
+                <div id="inProgressCount">
+                    0
+                </div>
+
+                <button onclick="showRequestsByStatus('In Progress')">
+                    View Requests
+                </button>
+
+            </div>
+
+
+            <!-- Resolved -->
+
+            <div class="dashboard-card">
+
+                <h2>Resolved</h2>
+
+                <p>
+                    View completed and resolved requests.
+                </p>
+
+                <div id="resolvedCount">
+                    0
+                </div>
+
+                <button onclick="showRequestsByStatus('Resolved')">
+                    View Requests
+                </button>
+
+            </div>
+
+
+            <!-- Closed -->
+
+            <div class="dashboard-card">
+
+                <h2>Closed</h2>
+
+                <p>
+                    View requests that have been completely closed.
+                </p>
+
+                <div id="closedCount">
+                    0
+                </div>
+
+                <button onclick="showRequestsByStatus('Closed')">
+                    View Requests
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ==========================================
+             REQUEST LIST
+             ========================================== -->
+
+        <section
+            class="request-list-section"
+            id="newRequestsSection"
+        >
+
+            <h2 id="requestListTitle">
+                New IT Requests
+            </h2>
+
+            <div id="newRequestsList">
+
+                <!-- Requests will appear here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SUPPORT CATEGORIES
+             ========================================== -->
+
+        <div class="dashboard-cards">
+
+
+            <!-- Software Support -->
+
+            <div class="dashboard-card">
+
+                <h2>Software Support</h2>
+
+                <p>
+                    Manage employee software-related issues.
+                </p>
+
+                <button>
+                    Manage
+                </button>
+
+            </div>
+
+
+            <!-- Asset Requests -->
+
+            <div class="dashboard-card">
+
+                <h2>Asset Requests</h2>
+
+                <p>
+                    Manage hardware and IT equipment requests.
+                </p>
+
+                <button>
+                    Manage
+                </button>
+
+            </div>
+
+
+            <!-- Troubleshooting -->
+
+            <div class="dashboard-card">
+
+                <h2>Troubleshooting</h2>
+
+                <p>
+                    Manage hardware, network and system problems.
+                </p>
+
+                <button>
+                    Manage
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
